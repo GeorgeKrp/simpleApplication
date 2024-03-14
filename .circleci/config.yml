@@ -44,4 +44,4 @@ jobs:
       - run:
           name: Deploy application to AWS
           command: |
-            ssh -o StrictHostKeyChecking=no MyWebServer@ec2-3-249-190-119.eu-west-1.compute.amazonaws.com "export SERVER=\"$SERVER\"; export PRIVATE_KEY=\"project_key\"; rm -rf simpleApplication/; git clone https://github.com/GeorgeKrp/simpleApplication.git; source ~/simpleApplication/deploy.sh"
+            ssh -o StrictHostKeyChecking=no my-key-pair@ec2-3-249-190-119.eu-west-1.compute.amazonaws.com "export SERVER=\"$SERVER\"; export PRIVATE_KEY=\"project_key\"; rm -rf simpleApplication/; git clone https://github.com/GeorgeKrp/simpleApplication.git; source ~/simpleApplication/deploy.sh"
